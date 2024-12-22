@@ -26,10 +26,29 @@ export class MainComponent implements OnInit {
     precio: 550
   }
 
+  libro3: Libro = {
+    nombre: 'geometria 1',
+    autor: 'porrua',
+    precio: 600
+  }
+
+  libro4: Libro = {
+    nombre: 'calculo 1',
+    autor: 'porrua',
+    precio: 700
+  }
+
   libros = [this.libro1, this.libro2];
+  libros2 = [this.libro3, this.libro4];
   numeroFicha = 0
+  
   item: Item = {
     libro: this.libros,
+    tax: .16
+  }
+
+  item2: Item = {
+    libro: this.libros2,
     tax: .16
   }
 
@@ -39,7 +58,7 @@ export class MainComponent implements OnInit {
   }
 
   cliente2: Cliente = {
-    compra: this.item,
+    compra: this.item2,
     ficha: this.numeroFicha+1
   }
 
